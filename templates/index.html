@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <a href="{% url 'new_post' %}"><span>Добавить пост!</span></a>
+
+    {% for post in posts %}
+    <a href="{% url 'post' post.pk %}"><h3>{{ post.title }}</h3></a>
+
+    <p>{{ post.body }}</p>
+    author: <span>{{ post.author }}</span>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h3>{{ post.title }}</h3>
+    <p>{{ post.body }}</p>
+    author: <span>{{ post.author }}</span>
+    <a href="{% url 'post_edit' post.pk %}">Редактировать</a>
+{% endblock %}
